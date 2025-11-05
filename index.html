@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>푸른씨앗재단 | Blue Seed Foundation</title>
+  <style>
+    /* 전체 기본 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f6fff4;
+      color: #2f3e2f;
+    }
+
+    /* 네비게이션 */
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      display: flex;
+      gap: 25px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #43a047; }
+
+    /* 공통 섹션 스타일 */
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      transition: all 0.8s ease;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      max-width: 700px;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* 섹션별 색상 */
+    .intro { background: linear-gradient(to bottom right, #a8e063, #56ab2f); color: white; }
+    .activity { background: #f8fff3; }
+    .campaign { background: #eafbea; }
+    .news { background: #effff2; }
+    .contact { background: #e5f8e5; }
+
+    /* 버튼 */
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      border-radius: 40px;
+      text-decoration: none;
+      color: white;
+      background: #4caf50;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #388e3c; }
+
+    /* 로고 */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    .logo svg {
+      width: 35px;
+      height: 35px;
+      fill: white;
+    }
+
+    /* 폼 */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #a5d6a7;
+      font-size: 15px;
+    }
+    textarea { resize: none; height: 100px; }
+    form button {
+      background: #4caf50;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover { background: #2e7d32; }
+
+    /* 페이드 인 효과 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 푸터 */
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav { gap: 10px; padding: 10px 20px; flex-wrap: wrap; }
+      h1 { font-size: 26px; }
+      p { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="#intro">소개</a>
+    <a href="#activity">핵심활동</a>
+    <a href="#campaign">캠페인참여</a>
+    <a href="#news">뉴스/스토리</a>
+    <a href="#contact">후원/문의</a>
+  </nav>
+
+  <!-- 소개 -->
+  <section class="intro fade-in" id="intro">
+    <div class="logo">
+      <svg viewBox="0 0 64 64"><path d="M32 2C16 2 2 16 2 32s14 30 30 30 30-14 30-30S48 2 32 2zm0 55C19.2 57 9 46.8 9 34S19.2 11 32 11s23 10.2 23 23-10.2 23-23 23z"/><path d="M32 18a14 14 0 1 0 0 28 14 14 0 0 0 0-28z"/></svg>
+      푸른씨앗재단
+    </div>
+    <p>지속 가능한 미래를 위해 청소년이 만드는 친환경 행동 플랫폼.  
+    푸른씨앗재단은 작지만 의미 있는 변화를 만들어갑니다.</p>
+    <a href="#activity" class="btn">더 알아보기</a>
+  </section>
+
+  <!-- 핵심활동 -->
+  <section class="activity fade-in" id="activity">
+    <h2>🌿 핵심활동</h2>
+    <p>1. 지역 환경 정화 캠페인  
+       2. 청소년 대상 생태교육  
+       3. 환경 정책 제안 활동  
+       4. 나무심기 & 일회용품 줄이기 캠페인</p>
+  </section>
+
+  <!-- 캠페인 참여 -->
+  <section class="campaign fade-in" id="campaign">
+    <h2>💚 캠페인 참여</h2>
+    <p>“작은 손이 지구를 바꾼다”  
+       당신의 참여가 세상을 푸르게 만듭니다.</p>
+    <a href="#" class="btn">참여 신청</a>
+  </section>
+
+  <!-- 뉴스 / 스토리 -->
+  <section class="news fade-in" id="news">
+    <h2>📰 뉴스 & 스토리</h2>
+    <p>푸른씨앗재단이 진행한 최신 활동과  
+       환경을 지키는 감동적인 이야기를 전합니다.</p>
+  </section>
+
+  <!-- 후원 / 문의 -->
+  <section class="contact fade-in" id="contact">
+    <h2>💌 후원 및 문의</h2>
+    <p>당신의 관심이 더 푸른 내일을 만듭니다.  
+       아래 양식을 작성해 후원 또는 문의를 남겨주세요.</p>
+    <form onsubmit="event.preventDefault(); alert('감사합니다! 메세지가 전송되었습니다.');">
+      <input type="text" placeholder="이름" required>
+      <input type="email" placeholder="이메일" required>
+      <textarea placeholder="메세지를 입력하세요"></textarea>
+      <button type="submit">보내기</button>
+    </form>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    © 2025 푸른씨앗재단 (Blue Seed Foundation).  
+    이 홈페이지의 지적 소유권은 재단에게 있습니다.
+  </footer>
+
+  <script>
+    // 스크롤 애니메이션
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+</html>
